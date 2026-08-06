@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+.venv/
+
+# Vector store (generated, large)
+chroma/
+
+# Environment variables (secrets)
+.env
+
+# Ollama models (too large for Git)
+.ollama/
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
