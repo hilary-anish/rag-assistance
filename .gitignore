@@ -27,3 +27,6 @@ Thumbs.db
 
 # Corpus PDFs (too large for Git, documented in data/corpus/README.md)
 data/corpus/**/*.pdf
+
+# Windows zone identifier files
+*Zone.Identifier
