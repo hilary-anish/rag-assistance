@@ -24,3 +24,6 @@ chroma/
 # OS junk
 .DS_Store
 Thumbs.db
+
+# Corpus PDFs (too large for Git, documented in data/corpus/README.md)
+data/corpus/**/*.pdf
