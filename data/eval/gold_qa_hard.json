@@ -1,0 +1,152 @@
+[
+  {
+    "question": "How long must automatically generated logs be retained for high-risk AI systems under the EU AI Act?",
+    "ground_truth": "Under Article 19(1), automatically generated logs must be kept for a minimum of 6 months, unless Union or national law provides otherwise.",
+    "relevant_source": "eu-regulations/eu-ai-act.pdf"
+  },
+  {
+    "question": "What is the reporting deadline when an AI system causes a death, according to the EU AI Act's serious incident provisions?",
+    "ground_truth": "Under Article 73, deaths must be reported within 10 days of becoming aware. General serious incidents require reporting within 15 days, and widespread infringements within 2 days.",
+    "relevant_source": "eu-regulations/eu-ai-act.pdf"
+  },
+  {
+    "question": "For how many years must providers keep technical documentation available for high-risk AI systems under the EU AI Act?",
+    "ground_truth": "Under Article 18(1), providers must keep technical documentation at the disposal of authorities for 10 years after a high-risk AI system has been placed on the market.",
+    "relevant_source": "eu-regulations/eu-ai-act.pdf"
+  },
+  {
+    "question": "What maximum duration does the EU AI Act allow for real-world testing of AI systems?",
+    "ground_truth": "Under Article 60(4)(f), real-world testing shall not last longer than 6 months, extendable by an additional 6 months with prior notification and explanation.",
+    "relevant_source": "eu-regulations/eu-ai-act.pdf"
+  },
+  {
+    "question": "Under the EU AI Act, when can market surveillance authorities demand access to the source code of an AI system?",
+    "ground_truth": "Under Article 74(13), authorities can demand access to source code only when two conditions are met: access is necessary to assess conformity, AND testing or auditing based on data and documentation has been exhausted or proved insufficient.",
+    "relevant_source": "eu-regulations/eu-ai-act.pdf"
+  },
+  {
+    "question": "What is the validity period for conformity certificates of high-risk AI systems covered by Annex I versus Annex III of the EU AI Act?",
+    "ground_truth": "Under Article 44(2), conformity certificates shall not exceed 5 years for AI systems covered by Annex I and 4 years for AI systems covered by Annex III.",
+    "relevant_source": "eu-regulations/eu-ai-act.pdf"
+  },
+  {
+    "question": "How many human verifiers are required for biometric identification results under the EU AI Act?",
+    "ground_truth": "Under Article 14(5), any identification result from a biometric identification system must be separately verified and confirmed by at least two natural persons, except for law enforcement, migration, or border control where this is deemed disproportionate.",
+    "relevant_source": "eu-regulations/eu-ai-act.pdf"
+  },
+  {
+    "question": "What specific EU IT systems get an extended compliance deadline until 31 December 2030 under the AI Act?",
+    "ground_truth": "Annex X lists 7 systems: the Schengen Information System (SIS), Visa Information System (VIS), Eurodac, Entry/Exit System (EES), European Travel Information and Authorisation System (ETIAS), ECRIS-TCN, and the Interoperability framework systems.",
+    "relevant_source": "eu-regulations/eu-ai-act.pdf"
+  },
+  {
+    "question": "What misalignment filtering threshold does RA-RAG use to decide when to replace a response with 'I don't know'?",
+    "ground_truth": "RA-RAG uses AlignScore with a threshold of tau = 0.1 as its filtering function to detect and replace misaligned responses with 'I don't know' (IDK).",
+    "relevant_source": "arxiv-papers/rag-source-reliability.pdf"
+  },
+  {
+    "question": "By how many percentage points does the ARES evaluation framework outperform RAGAS on context relevance?",
+    "ground_truth": "ARES outperforms the RAGAS evaluation framework by up to 59.3 percentage points specifically on the context relevance dimension, using prediction-powered inference to align LLM-based judges with human judgment.",
+    "relevant_source": "arxiv-papers/rag-comprehensive-survey.pdf"
+  },
+  {
+    "question": "What weighting factor between sparse and dense retrieval scores was found optimal in the RAG best practices study?",
+    "ground_truth": "Alpha = 0.3 in the formula S_h = alpha * S_s + S_d yielded the best hybrid search performance on TREC DL19 and DL20, weighting sparse retrieval at 30%.",
+    "relevant_source": "arxiv-papers/rag-best-practices.pdf"
+  },
+  {
+    "question": "How does arranging retrieved documents in reverse relevancy order compare to the 'sides' arrangement for RAG generation?",
+    "ground_truth": "The 'reverse' repacking configuration, which places documents in ascending relevancy with the most relevant closest to the query, achieved the best RAG score, outperforming the 'sides' arrangement that was inspired by the 'Lost in the Middle' finding.",
+    "relevant_source": "arxiv-papers/rag-best-practices.pdf"
+  },
+  {
+    "question": "What percentage of LLM responses are hallucinations when retrieved documents are irrelevant, and how much does alignment filtering reduce this?",
+    "ground_truth": "Without filtering, Llama3-8B-Instruct produces hallucinations 22.89% of the time on irrelevant documents. After AlignScore filtering, hallucinations drop from 22.89% to 4.53%, an 18.36 percentage point reduction, while IDK responses rise from 50.92% to 91.19%.",
+    "relevant_source": "arxiv-papers/rag-source-reliability.pdf"
+  },
+  {
+    "question": "How much faster is the lightest reranking model compared to a 7B parameter reranker on the MS MARCO benchmark?",
+    "ground_truth": "TILDEv2 reranks in 0.02 seconds per query while RankLLaMA (7B parameters) takes 82.4 seconds per query — a 4,120x latency difference for only a 4.52 point MRR@10 improvement.",
+    "relevant_source": "arxiv-papers/rag-best-practices.pdf"
+  },
+  {
+    "question": "What accuracy does CLIP achieve on handwritten digit recognition, and why does it fail?",
+    "ground_truth": "CLIP achieves only 88% on MNIST, worse than logistic regression on raw pixels, because nearest-neighbor retrieval found almost no MNIST-like images in the 12.8 billion-image pre-training dataset.",
+    "relevant_source": "computer-vision/clip.pdf"
+  },
+  {
+    "question": "What happens to CLIP's robustness under distribution shift when it is fine-tuned on ImageNet?",
+    "ground_truth": "Adapting CLIP to ImageNet boosts ImageNet accuracy by 9.2% to 85.4%, but average accuracy under natural distribution shift slightly decreases, with specific drops of 4.7% on ImageNet-R, 3.8% on ObjectNet, 2.8% on ImageNet Sketch, and 1.9% on ImageNet-A.",
+    "relevant_source": "computer-vision/clip.pdf"
+  },
+  {
+    "question": "What are the two mathematically distinct collapse modes in self-supervised vision transformer training that DINO prevents?",
+    "ground_truth": "Without centering, entropy converges to 0 (one dimension dominates). Without sharpening, entropy converges to -log(1/K) (uniform distribution). These are distinct collapse signatures, explaining why both centering and sharpening are necessary.",
+    "relevant_source": "computer-vision/dino.pdf"
+  },
+  {
+    "question": "How does removing spatial positional encodings from only the encoder versus from the entire model affect DETR's detection performance?",
+    "ground_truth": "Removing all spatial positional encodings drops AP to 32.8 (-7.8 points), but removing them only from the encoder while keeping sine encodings in the decoder yields 39.3 AP (only -1.3), showing spatial encodings matter far more for the encoder.",
+    "relevant_source": "computer-vision/detr.pdf"
+  },
+  {
+    "question": "What filtering thresholds does SAM's automatic mask generation use for confidence and stability?",
+    "ground_truth": "SAM uses three filtering thresholds: IoU score of 88.0 for confidence, IoU of 95.0 between differently-thresholded binary masks for stability, and removal of masks covering 95% or more of the image.",
+    "relevant_source": "computer-vision/segment-anything-sam.pdf"
+  },
+  {
+    "question": "Why did DINOv2 modify the ViT-g architecture to use 1536 embedding dimensions with 24 heads instead of the originally proposed 1408 with 16 heads?",
+    "ground_truth": "The dimensions were deliberately modified to align with GPU hardware constraints, which require the embedding dimension per head to be a multiple of 64 and the full embedding dimension to be a multiple of 256 for efficient computation.",
+    "relevant_source": "computer-vision/dinov2.pdf"
+  },
+  {
+    "question": "What is the effect of label smoothing on perplexity versus translation quality in the original Transformer?",
+    "ground_truth": "Label smoothing at epsilon=0.1 explicitly hurts perplexity because the model learns to be more unsure, yet it improves BLEU score — a counterintuitive tradeoff where the metric it optimizes against (perplexity) gets worse while downstream quality improves.",
+    "relevant_source": "computer-vision/attention-is-all-you-need.pdf"
+  },
+  {
+    "question": "What happens to object detection accuracy when absolute position embeddings are added to Swin Transformer?",
+    "ground_truth": "Adding absolute position embeddings improves ImageNet classification by +0.4% but degrades COCO detection by -0.2 box/mask AP and ADE20K segmentation by -0.6 mIoU, showing that absolute position embeddings help classification but hurt dense prediction tasks.",
+    "relevant_source": "computer-vision/swin-transformer.pdf"
+  },
+  {
+    "question": "How do you measure the angular distance between two embedding vectors, and is the resulting value a true mathematical metric?",
+    "ground_truth": "Angular distance is measured using cosine distance, defined as 1 minus the cosine similarity. Cosine distance is not a true metric in the mathematical sense because it does not satisfy the triangle inequality in all cases, though it does for non-negative vectors.",
+    "relevant_source": "technical-docs/cosine-similarity.md"
+  },
+  {
+    "question": "What is the mathematical relationship between squared L2 distance and angular similarity for unit-length vectors?",
+    "ground_truth": "For L2-normalized vectors, squared Euclidean distance and cosine similarity are monotonically related by the formula: ||A - B||^2 = 2(1 - cos(A, B)), meaning ranking by one is equivalent to ranking by the other.",
+    "relevant_source": "technical-docs/cosine-similarity.md"
+  },
+  {
+    "question": "What is the embedding training objective that requires no explicit negative sampling by treating other examples in the same batch as negatives?",
+    "ground_truth": "Multiple Negatives Ranking Loss (MNRL) treats all other positive examples in the batch as negatives, requiring no explicit negative sampling. Given a batch of (query, positive) pairs, every other positive serves as a negative.",
+    "relevant_source": "technical-docs/vector-embeddings.md"
+  },
+  {
+    "question": "How much can retrieval recall change when you double the size of text segments used for document splitting?",
+    "ground_truth": "A 2x change in chunk size can produce a 5-15% change in Recall@10, making chunk size a high-impact tuning parameter for retrieval quality.",
+    "relevant_source": "technical-docs/chunking-strategies.md"
+  },
+  {
+    "question": "What approach decomposes generated text into atomic factual statements and measures what fraction a reference source supports?",
+    "ground_truth": "FActScore decomposes generated text into atomic facts and computes the percentage supported by a reference source, ranging from 0 (all hallucinated) to 1 (all supported).",
+    "relevant_source": "technical-docs/hallucination-in-llms.md"
+  },
+  {
+    "question": "How much memory does a transformer model's key-value cache require for a 4096-token sequence with 32 layers and 32 attention heads at half precision?",
+    "ground_truth": "For a model with 32 layers, 32 heads, head dimension 128, and float16 precision, the KV cache for a 4,096-token sequence requires approximately 1 GB of memory.",
+    "relevant_source": "technical-docs/transformer-architecture.md"
+  },
+  {
+    "question": "What technique fine-tunes a language model on examples containing a mix of relevant and irrelevant retrieved passages to improve robustness to noisy retrieval?",
+    "ground_truth": "RAFT (Retrieval Augmented Fine-Tuning) fine-tunes the model on examples that include both relevant and irrelevant retrieved documents, teaching the model to extract the correct answer from noisy context.",
+    "relevant_source": "technical-docs/fine-tuning-vs-rag.md"
+  },
+  {
+    "question": "How much storage compression does ColBERT's second version achieve per token compared to the uncompressed token-level embeddings?",
+    "ground_truth": "ColBERTv2 uses residual compression to reduce per-document storage to approximately 25 bytes per token, down from roughly 1.5 KB for 128 tokens at 128 dimensions in float16.",
+    "relevant_source": "technical-docs/cross-encoder-vs-bi-encoder.md"
+  }
+]
