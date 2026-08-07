@@ -1,0 +1,152 @@
+[
+  {
+    "question": "What is the EU AI Act's definition of an 'AI system' according to Article 3?",
+    "ground_truth": "An AI system is defined as a machine-based system designed to operate with varying levels of autonomy that may exhibit adaptiveness after deployment, and that infers from its input how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments.",
+    "relevant_source": "eu-regulations/eu-ai-act.pdf"
+  },
+  {
+    "question": "What is the maximum administrative fine for non-compliance with the prohibited AI practices under Article 5 of the EU AI Act?",
+    "ground_truth": "Non-compliance with Article 5 prohibited practices is subject to fines of up to EUR 35,000,000 or up to 7% of total worldwide annual turnover for the preceding financial year, whichever is higher.",
+    "relevant_source": "eu-regulations/eu-ai-act.pdf"
+  },
+  {
+    "question": "What computational threshold does the EU AI Act set for presuming a general-purpose AI model has systemic risk?",
+    "ground_truth": "Under Article 51(2), a general-purpose AI model is presumed to have high impact capabilities when the cumulative amount of computation used for its training exceeds 10^25 floating point operations.",
+    "relevant_source": "eu-regulations/eu-ai-act.pdf"
+  },
+  {
+    "question": "When does the EU AI Act generally apply, and when do the prohibited practices provisions take effect?",
+    "ground_truth": "The Regulation generally applies from 2 August 2026, but Chapters I and II covering definitions and prohibited practices apply earlier from 2 February 2025.",
+    "relevant_source": "eu-regulations/eu-ai-act.pdf"
+  },
+  {
+    "question": "What are the three exceptions that allow real-time remote biometric identification in public spaces for law enforcement under the EU AI Act?",
+    "ground_truth": "Real-time remote biometric identification is allowed only for targeted search for victims of abduction, trafficking, or missing persons; prevention of specific imminent threats to life or terrorist attacks; and locating suspects of crimes punishable by at least four years of custody.",
+    "relevant_source": "eu-regulations/eu-ai-act.pdf"
+  },
+  {
+    "question": "How does the EU AI Act treat administrative fines for SMEs and start-ups compared to larger companies?",
+    "ground_truth": "Under Article 99(6), for SMEs including start-ups, each fine shall be up to the percentages or amounts specified, whichever is lower, rather than whichever is higher as applied to larger companies.",
+    "relevant_source": "eu-regulations/eu-ai-act.pdf"
+  },
+  {
+    "question": "What does Article 4 of the EU AI Act require regarding AI literacy?",
+    "ground_truth": "Article 4 requires that providers and deployers of AI systems take measures to ensure a sufficient level of AI literacy of their staff and other persons dealing with the operation and use of AI systems on their behalf.",
+    "relevant_source": "eu-regulations/eu-ai-act.pdf"
+  },
+  {
+    "question": "What is the definition of 'deep fake' in the EU AI Act?",
+    "ground_truth": "A deep fake is defined as AI-generated or manipulated image, audio, or video content that resembles existing persons, objects, places, entities, or events and would falsely appear to a person to be authentic or truthful.",
+    "relevant_source": "eu-regulations/eu-ai-act.pdf"
+  },
+  {
+    "question": "What is Reliability-Aware RAG (RA-RAG) and how does it aggregate information from multiple sources?",
+    "ground_truth": "RA-RAG is a multi-source RAG framework that aggregates information using weighted majority voting (WMV), where source reliability weights are estimated by cross-checking information across multiple sources without manual fact-checking.",
+    "relevant_source": "arxiv-papers/rag-source-reliability.pdf"
+  },
+  {
+    "question": "How much does kappa-RRSS reduce token consumption with 1,000 sources in the RA-RAG framework?",
+    "ground_truth": "With 1,000 sources, kappa-RRSS reduces token consumption by 99.1%, from 627,115 to 5,415 tokens per query, while accuracy only drops from 0.780 to 0.768 on the Natural Questions dataset using GPT-4o-mini.",
+    "relevant_source": "arxiv-papers/rag-source-reliability.pdf"
+  },
+  {
+    "question": "What is the best-performing RAG recipe recommended in the RAG best practices paper from Fudan University?",
+    "ground_truth": "The recommended recipe is query classification combined with Hybrid with HyDE retrieval, monoT5 reranking, Reverse repacking, and Recomp summarization, achieving the highest average score of 0.483.",
+    "relevant_source": "arxiv-papers/rag-best-practices.pdf"
+  },
+  {
+    "question": "What chunk size achieved the best faithfulness score on the lyft_2021 dataset according to the RAG best practices study?",
+    "ground_truth": "A chunk size of 512 tokens achieved the best faithfulness score of 97.59 and relevancy of 97.41, while chunk size 2048 had much lower faithfulness at 80.37.",
+    "relevant_source": "arxiv-papers/rag-best-practices.pdf"
+  },
+  {
+    "question": "What is the BadRAG attack and how effective is it at poisoning a RAG corpus?",
+    "ground_truth": "BadRAG is an adversarial corpus poisoning attack where poisoning just 0.04% of a corpus can lead to a 98.2% attack success rate and a 74.6% system failure rate, demonstrating severe vulnerability of RAG systems.",
+    "relevant_source": "arxiv-papers/rag-comprehensive-survey.pdf"
+  },
+  {
+    "question": "What four categories does the comprehensive RAG survey propose in its taxonomy of RAG architectures?",
+    "ground_truth": "The survey proposes a four-category taxonomy: retriever-centric, generator-centric, hybrid, and robustness-oriented RAG designs.",
+    "relevant_source": "arxiv-papers/rag-comprehensive-survey.pdf"
+  },
+  {
+    "question": "What reranking latency does monoT5 have on MS MARCO compared to TILDEv2, according to the RAG best practices paper?",
+    "ground_truth": "MonoT5 has a latency of 4.5 seconds per query on MS MARCO, compared to TILDEv2 which is the fastest at 0.02 seconds per query. MonoBERT takes 15.8 seconds and RankLLaMA takes 82.4 seconds.",
+    "relevant_source": "arxiv-papers/rag-best-practices.pdf"
+  },
+  {
+    "question": "What are the three model sizes of Vision Transformer (ViT) and their parameter counts?",
+    "ground_truth": "ViT has three variants: ViT-Base with 12 layers and 86M parameters, ViT-Large with 24 layers and 307M parameters, and ViT-Huge with 32 layers and 632M parameters.",
+    "relevant_source": "computer-vision/vision-transformer-vit.pdf"
+  },
+  {
+    "question": "How does CLIP perform on zero-shot ImageNet classification compared to supervised ResNet-50?",
+    "ground_truth": "Zero-shot CLIP using ViT-L/14@336px matched the accuracy of the original supervised ResNet-50 on ImageNet at 76.2% top-1 accuracy without using any of ImageNet's 1.28 million labeled training examples.",
+    "relevant_source": "computer-vision/clip.pdf"
+  },
+  {
+    "question": "How does DINO prevent collapse during self-supervised ViT training without contrastive loss?",
+    "ground_truth": "DINO prevents collapse solely by centering and sharpening the teacher outputs, without requiring contrastive loss, a predictor head, or batch normalization. A student ViT is trained to match a momentum-updated teacher ViT using cross-entropy loss.",
+    "relevant_source": "computer-vision/dino.pdf"
+  },
+  {
+    "question": "How large is the SA-1B dataset used by Segment Anything (SAM), and how does it compare to prior datasets?",
+    "ground_truth": "The SA-1B dataset contains 1.1 billion masks on 11 million images, which is 400x more masks than the largest prior dataset (Open Images with 2.7 million masks), averaging approximately 100 masks per image.",
+    "relevant_source": "computer-vision/segment-anything-sam.pdf"
+  },
+  {
+    "question": "What is the key architectural innovation of DETR for object detection?",
+    "ground_truth": "DETR eliminates hand-designed components like non-maximum suppression (NMS) and anchor generation by using a set-based global loss with bipartite matching via the Hungarian algorithm and a transformer encoder-decoder architecture.",
+    "relevant_source": "computer-vision/detr.pdf"
+  },
+  {
+    "question": "What BLEU score did the Transformer (big) model achieve on WMT 2014 English-to-German translation?",
+    "ground_truth": "The Transformer (big) achieved 28.4 BLEU on WMT 2014 English-to-German, surpassing prior best results including ensembles by over 2 BLEU points, while training in 3.5 days on 8 P100 GPUs.",
+    "relevant_source": "computer-vision/attention-is-all-you-need.pdf"
+  },
+  {
+    "question": "How does Swin Transformer achieve linear computational complexity compared to ViT's quadratic complexity?",
+    "ground_truth": "Swin Transformer introduces shifted window self-attention that computes attention within local non-overlapping windows, achieving linear computational complexity with image size, unlike ViT which computes global self-attention with quadratic complexity.",
+    "relevant_source": "computer-vision/swin-transformer.pdf"
+  },
+  {
+    "question": "How does latent diffusion reduce compute compared to pixel-based diffusion models?",
+    "ground_truth": "Latent diffusion models separate generation into perceptual compression via an autoencoder and then latent-space diffusion, reducing compute by at least 2.7x over pixel-based diffusion while improving FID by at least 1.6x.",
+    "relevant_source": "computer-vision/latent-diffusion.pdf"
+  },
+  {
+    "question": "What is the formula for cosine similarity and what is its range?",
+    "ground_truth": "Cosine similarity is computed as cosine_similarity(A, B) = (A · B) / (‖A‖ × ‖B‖), where A · B is the dot product and ‖A‖ is the L2 norm. It ranges from -1 (opposite directions) to +1 (same direction).",
+    "relevant_source": "technical-docs/cosine-similarity.md"
+  },
+  {
+    "question": "What is the difference between intrinsic and extrinsic hallucination in LLMs?",
+    "ground_truth": "Intrinsic hallucination occurs when the generated output contradicts the provided source material, while extrinsic hallucination contains information that cannot be verified from the source material — it is neither supported nor contradicted by the available context.",
+    "relevant_source": "technical-docs/hallucination-in-llms.md"
+  },
+  {
+    "question": "What is the typical MRR@10 improvement when adding a cross-encoder reranker to a bi-encoder retrieval system on MS MARCO?",
+    "ground_truth": "On MS MARCO, a typical bi-encoder achieves MRR@10 of approximately 0.33-0.38, and adding a cross-encoder reranker improves this to approximately 0.38-0.42.",
+    "relevant_source": "technical-docs/cross-encoder-vs-bi-encoder.md"
+  },
+  {
+    "question": "What is the parent-child chunking strategy and how does it work?",
+    "ground_truth": "Parent-child chunking embeds small child chunks (e.g., 256 tokens) for precise retrieval but returns larger parent chunks (e.g., 2048 tokens) to the LLM for generation, combining retrieval precision of small chunks with contextual completeness of large chunks.",
+    "relevant_source": "technical-docs/chunking-strategies.md"
+  },
+  {
+    "question": "What is NDCG and what benchmark uses NDCG@10 as its primary retrieval metric?",
+    "ground_truth": "NDCG (Normalized Discounted Cumulative Gain) normalizes the discounted cumulative gain by the ideal DCG of a perfect ranking, producing a score from 0 to 1. NDCG@10 is the primary metric on the MTEB (Massive Text Embedding Benchmark) leaderboard for retrieval tasks.",
+    "relevant_source": "technical-docs/evaluation-metrics-ir.md"
+  },
+  {
+    "question": "What is the 'lost in the middle' effect in prompt engineering for RAG systems?",
+    "ground_truth": "The lost in the middle effect describes how LLMs attend less to information placed in the center of a long context compared to information at the beginning or end. More relevant documents should therefore be placed first or last in the prompt.",
+    "relevant_source": "technical-docs/prompt-engineering.md"
+  },
+  {
+    "question": "How much of a model's parameters does LoRA typically train, and what does QLoRA add?",
+    "ground_truth": "LoRA trains only 0.1-1% of parameters by adding low-rank decomposition matrices to frozen original weights. QLoRA extends this by combining LoRA with 4-bit quantization of the base model, enabling fine-tuning of 65B+ parameter models on a single GPU with 48 GB of VRAM.",
+    "relevant_source": "technical-docs/fine-tuning-vs-rag.md"
+  }
+]
