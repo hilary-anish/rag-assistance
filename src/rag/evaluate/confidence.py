@@ -4,7 +4,7 @@ import json
 import math
 from pathlib import Path
 
-from rag.retrieve.retriever import HybridRetriever, Result
+from rag.retrieve.retriever import HybridRetriever
 
 
 def confidence(
@@ -94,7 +94,7 @@ if __name__ == "__main__":
         1 for r in incorrect_rows if r["flag"] != "grounded"
     )
 
-    print(f"\n--- Summary ---")
+    print("\n--- Summary ---")
     print(f"Total questions:        {len(rows)}")
     print(f"Retrieval correct:      {len(correct_rows)}/{len(rows)}")
     print(f"Retrieval incorrect:    {len(incorrect_rows)}/{len(rows)}")
