@@ -1,0 +1,4 @@
+.venv/
+.git/
+chroma/
+__pycache__/
